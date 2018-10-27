@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8" />
+	<meta name="author" content="Žan Žnidar">
+	<title>Prostost učilnic GimKr</title>
+	<meta name="description" content="Proste učilnice na Gimnaziji Kranj">
+	
+	<style type="text/css">p.break { page-break-before: always; }
+<!--
+td {border: 1px; vertical-align:text-top; padding:3px; cell-margin:0px; border-style:solid; border-color:black;}
+ .tdx {border: 1px; vertical-align:text-top; padding:10px; cell-margin:0px; background-color:white; border-style:solid; border-color:black;}
+ .tdgray {border: 1px; vertical-align:text-top; padding:3px; cell-margin:0px; background-color:#E9E9E9; border-style:solid; border-color:black;}
+table {border-width: 1px; padding:0px; margin:0px; font-family : verdana; font-size:1em; border-style:solid; border-color:black; border-collapse: collapse;}
+-->
+<!--
+div.banners {
+display: none;
+}
+-->
+<!--
+div.bannet {
+display: none;
+}
+-->
+  </style>
+</head> 
+ 
+<body> 
+<h1 style="margin-bottom: 0.2em;">Prostost učilnic Gimnazije Kranj</h1>
+<p id="urnik">Nalagam trenutni urnik ...</p>
+<!-- <p><i>V prvem mesecu se urniki lahko še nekoliko spremenijo.</i></p> -->
+
+
+
+<button type="button" onclick="prikaz(1)">Urnik 1</button>
+<button type="button" onclick="prikaz(2)">Urnik 2</button>
+<button type="button" onclick="prikaz(3)">Urnik 3</button>
+<button type="button" onclick="prikaz(4)">Urnik 4</button>
+
+
+<table id="tbl">
+<tbody><tr><td></td><td><b>Ponedeljek</b></td><td><b>Torek</b></td><td><b>Sreda</b></td><td><b>Četrtek</b></td><td><b>Petek</b>
+</td></tr><tr><td><b>1. ura <br><small>(7.10–07.55)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>2. ura <br><small>(08.00–08.45)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>3. ura <br><small>(08.50–09.35)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>4. ura <br><small>(09.40–10.25)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>5. ura <br><small>(10.40–11.25)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>6. ura <br><small>(11.30–12.15)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>7. ura <br><small>(12.20–13.05)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>8. ura <br><small>(13.10–13.55)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>9. ura <br><small>(14.00–14.45)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>10. ura <br><small>(14.50–15.35)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+
+
+<br>
+<p style="margin-top: 0.5em; margin-bottom: 1.5em"><a href="http://www.gimkr.si/urniki">Podatki</a> zajeti dne 18.&nbsp;10.&nbsp;2018 | Avtor: Žan&nbsp;Žnidar</p>
+<p style="color:gray; font-size:0.8em"><a href="changes" style="text-decoration: underline; color: gray;" onclick="postAjax('obiski.php', 'stran=prostost/changes', function(data){ console.log(data); });">Različica 1.5</a>, nazadnje posodobljeno 2018-10-18</p> <!-- verzija -->
+<p id="counter" style="color:lightgray; font-size:0.9em; text-align:center">Število obiskov strani:</p>
+
+	<script src="Prostost_ucilnic_GimKr_2018-19.js"></script>
+	
+	<script>
+		function postAjax(url, data, success) {
+			var params = typeof data == 'string' ? data : Object.keys(data).map(
+					function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }
+				).join('&');
+
+			var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+			xhr.open('POST', url);
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState>3 && xhr.status==200) { success(xhr.responseText); }
+			};
+			xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+			xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xhr.send(params);
+			return xhr;
+		}
+
+		// example request
+		postAjax('http://snf-44113.vm.okeanos-global.grnet.gr/obiski.php', ('stran=prostost' + window.location.hash + '&ref=' + document.referrer), function(data){ console.log(data); document.getElementById("counter").innerText += " " + (data).split("\n")[2]; });
+		
+		// Odstranimo oglas
+		setTimeout(function(){ document.getElementsByTagName("img")[0].parentElement.parentElement.remove(); }, 0);
+		
+	</script>
+	
+</body> 
+</html> 
