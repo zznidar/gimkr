@@ -1,0 +1,19 @@
+﻿1.5 (2018-10-27)
+	+ Prestavljeno gostovanje
+	* Ponovno zajeti podatki s prostostjo do 10. ure tudi pri učilnicah, ki nikoli nimajo toliko ur pouka
+
+1.4 (2018-09-03)
+	+ Urniki za šolsko leto 2018/2019
+	+ Obarvanje trenutnega dneva na vrhu tabele
+
+1.3 (2018-03-14)
+	+ Delno obarvanje trenutne ure glede na trenutni čas
+
+1.2 (2018-02-28)
+	+ Obarvanje urnika glede na trenutno uro
+
+1.1 (2018-02-16)
+	+ Samodejna izbira urnika
+	+ Dnevnik sprememb
+	+ Prikaz števila obiskov
+	* Spremenjena pozicija nekaterih elementov

@@ -71,9 +71,6 @@ display: none;
 		// example request
 		postAjax(('https://snf-44113.dozen.vm.okeanos-global.grnet.gr/obiski.php'.replace("dozen.", "")), ('stran=prostost' + window.location.hash + '&ref=' + document.referrer), function(data){ console.log(data); document.getElementById("counter").innerText += " " + (data).split("\n")[2]; });
 		
-		// Odstranimo oglas
-		setTimeout(function(){ document.getElementsByTagName("img")[0].parentElement.parentElement.remove(); }, 0);
-		
 	</script>
 	
 </body> 
