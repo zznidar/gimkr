@@ -69,6 +69,8 @@ function naprej() {
         for (var k = 0; k < mozniDatumi.length; k++) {
             md += mozniDatumi[k].split("\t")[0] + " 2019\t" + mozniDatumi[k].split("\t")[1] + "\n";
         }
+        console.log("\n\n*** Najbolje se kopira iz brskalnika Google Chrome v razpredelnice Google Sheets. ***\n");
+        console.log("\n\n*** SEZNAM ZA KOPIRANJE: ***\n\n");
         console.log(md);
     }
 }
