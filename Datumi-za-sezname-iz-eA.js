@@ -4,7 +4,7 @@
 
 const pr = "SLO"; // Predmet
 const te = 3; // Število tednov za naprej
-const blok = true; // true, če želimo, da se blok ura obnaša kot dve ločeni uri, torej da vsako uro vpraša enega
+const blok = false; // true, če želimo, da se blok ura obnaša kot dve ločeni uri, torej da vsako uro vpraša enega
 const nauro = 2; // Koliko dijakov vpraša na uro
 
 
