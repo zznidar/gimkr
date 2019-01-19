@@ -1,6 +1,6 @@
-Navodila za uporabo Datumi-za-sezname-iz-eA.js
+# Navodila za uporabo Datumi-za-sezname-iz-eA.js
 
-0. Odpreš https://raw.githubusercontent.com/zznidar/gimkr/master/Datumi-za-sezname-iz-eA.js in kopiraš vso vsebino.
+0. Odpreš https://raw.githubusercontent.com/zznidar/gimkr/master/Datumi-za-sezname-iz-eA/Datumi-za-sezname-iz-eA.js in kopiraš vso vsebino.
 1. Na računalniku se prijaviš v eAsistenta (priporočam uporabo brskalnika Google Chrome).
 2. Izbereš začetni teden (najpogosteje trenutnji ali naslednji teden).
 3. Pritisneš gumb F12 na tipkovnici.
