@@ -73,15 +73,6 @@ function naprej() {
     }
 }
 
-
-/*deduped = [...new Set(mozniDatumi)]; //Dedupliciramo blok ure*/
-for(var i = 0; i< deduped.length;++i){ // Po dva na uro
-    dupl.push(deduped[i]);
-    dupl.push(deduped[i]);
- }
-
-
-
 } // Celotno kodo ovijemo v {}, da gre za svoj scope, da browser ne izvrže SyntaxError: Identifier has already been declared ob ponovnem zagonu snippeta
 
 /* KONEC KODE */
