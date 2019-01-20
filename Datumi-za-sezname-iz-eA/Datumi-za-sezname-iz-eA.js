@@ -2,10 +2,10 @@
 
 {
 
-const pr = "SLO"; // Predmet
-const te = 3; // Število tednov za naprej
-const blok = false; // true, če želimo, da se blok ura obnaša kot dve ločeni uri, torej da vsako uro vpraša enega
-const nauro = 2; // Koliko dijakov vpraša na uro
+const PR = "SLO"; // Predmet
+const TE = 3; // Število tednov za naprej
+const BLOK = false; // true, če želimo, da se blok ura obnaša kot dve ločeni uri, torej da vsako uro vpraša enega
+const NAURO = 2; // Koliko dijakov vpraša na uro
 
 
 mozniDatumi = [];
@@ -30,7 +30,7 @@ function check() {
         for (var v = 1; v < vrsta.length; v++) {
             try {
                 predmet = vrsta[v].getElementsByClassName("flex-cell")[d].firstElementChild.firstElementChild.firstElementChild.lastElementChild.innerText;
-                if (predmet == pr) {
+                if (predmet == PR) {
                     console.log(predmet);
                     mozniDatumi.push(datum + "\t" + imedneva);
                 }
@@ -40,7 +40,7 @@ function check() {
 }
 
 function naprej() {
-    if (t < te) {
+    if (t < TE) {
         desno.click();
         t++;
         console.log("desno" + t);
@@ -49,15 +49,15 @@ function naprej() {
         console.log("posisceno");
         console.log(mozniDatumi);
 
-        if(!blok) {
+        if(!BLOK) {
             mozniDatumi = [...new Set(mozniDatumi)]; // Dedupliciramo blok ure
         }
 
-        if(nauro > 1) {
-            //console.log("nauro: ", nauro);
-            for(var i = 0; i < mozniDatumi.length; i+= nauro) {
+        if(NAURO > 1) {
+            //console.log("nauro: ", NAURO);
+            for(var i = 0; i < mozniDatumi.length; i+= NAURO) {
                 //console.log("md.l in i: ", mozniDatumi.length, i);
-                for(var j = 1; j < nauro; j++) {
+                for(var j = 1; j < NAURO; j++) {
                     mozniDatumi.splice(i, 0, mozniDatumi[i]);
                     //console.log("md.splicE: ", mozniDatumi);
                 }
