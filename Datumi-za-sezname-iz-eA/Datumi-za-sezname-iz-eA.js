@@ -11,6 +11,14 @@ const NAURO = 2; // Koliko dijakov vpraša na uro
 mozniDatumi = [];
 desno = document.getElementsByClassName("icon icon-arrow-open-right")[0];
 
+solskoLeto = [];
+danes = new Date;
+if(danes.getMonth() > 6) {
+	solskoLeto.push(danes.getFullYear()+"", danes.getFullYear()+1+"");
+} else {
+    solskoLeto.push(danes.getFullYear()-1+"", danes.getFullYear()+"");
+}
+
 t = 0;
 
 var casovnik = setInterval(function() {
@@ -67,7 +75,7 @@ function naprej() {
         md = "";
 
         for (var k = 0; k < mozniDatumi.length; k++) {
-            md += mozniDatumi[k].split("\t")[0] + " 2019\t" + mozniDatumi[k].split("\t")[1] + "\n";
+            md += mozniDatumi[k].split("\t")[0] + " "+(mozniDatumi[k].split("\t")[0].split(". ")[1].split(".")[0] > 6 ? solskoLeto[0] : solskoLeto[1])+"\t" + mozniDatumi[k].split("\t")[1] + "\n";
         }
         console.log("\n\n*** Najbolje se kopira iz brskalnika Google Chrome v razpredelnice Google Sheets. ***\n");
         console.log("\n\n*** SEZNAM ZA KOPIRANJE: ***\n\n");
