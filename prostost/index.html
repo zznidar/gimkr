@@ -45,14 +45,14 @@ display: none;
 
 
 <br>
-<p style="margin-top: 0.5em; margin-bottom: 1.5em"><a href="http://www.gimkr.si/urniki">Podatki</a> zajeti dne 18.&nbsp;10.&nbsp;2018 | Avtor: Žan&nbsp;Žnidar</p>
-<p style="color:gray; font-size:0.8em"><a href="https://raw.githubusercontent.com/zznidar/gimkr/master/prostost/changes" style="text-decoration: underline; color: gray;" onclick="postAjax('obiski.php', 'stran=prostost/changes', function(data){ console.log(data); });">Različica 1.5.1</a>, nazadnje posodobljeno 2018-10-28</p> <!-- verzija -->
-<p id="counter" style="color:lightgray; font-size:0.9em; text-align:center">Število obiskov strani:</p>
+<p style="margin-top: 0.5em; margin-bottom: 1.5em"><a href="http://www.gimkr.si/urniki">Podatki</a> zajeti dne <a href="https://www.easistent.com/urniki/56149a5b3eb5cbefdaf9c9ded39a80c8c31d8f33/ucilnice/652150">30.&nbsp;8.&nbsp;2019</a> | Avtor: Žan&nbsp;Žnidar</p>
+<p style="color:gray; font-size:0.8em"><a href="https://raw.githubusercontent.com/zznidar/gimkr/master/prostost/changes" style="text-decoration: underline; color: gray;" onclick="postAjax('obiski.php', 'stran=prostost/changes', function(data){ console.log(data); });">Različica 1.6</a>, nazadnje posodobljeno 2019-08-30</p> <!-- verzija -->
+<!-- <p id="counter" style="color:lightgray; font-size:0.9em; text-align:center">Število obiskov strani:</p> -->
 
-	<script src="Prostost_ucilnic_GimKr_2018-19.js"></script>
+	<script src="Prostost_ucilnic_GimKr_2019-20.js"></script>
 	
 	<script>
-		function postAjax(url, data, success) {
+		/*function postAjax(url, data, success) {
 			var params = typeof data == 'string' ? data : Object.keys(data).map(
 					function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }
 				).join('&');
@@ -69,8 +69,8 @@ display: none;
 		}
 
 		// example request
-		postAjax(('https://snf-44113.dozen.vm.okeanos-global.grnet.gr/obiski.php'.replace("dozen.", "")), ('stran=prostost' + window.location.hash + '&ref=' + document.referrer), function(data){ console.log(data); document.getElementById("counter").innerText += " " + (data).split("\n")[2]; });
-		
+		postAjax(('server.dozen.Url/obiski.php'.replace("dozen.", "")), ('stran=prostost' + window.location.hash + '&ref=' + document.referrer), function(data){ console.log(data); document.getElementById("counter").innerText += " " + (data).split("\n")[2]; });
+		*/
 	</script>
 	
 </body> 
