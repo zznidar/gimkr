@@ -43,7 +43,7 @@ function check() {
 	
 	
 	if(izvzemi.indexOf(trenutnaUclinica) === -1) { // Preskocimo, ce je ucilnica na seznamu izvzetih
-		for(var i = 1; i < (6*10 -1); i++) { // 6 stolpcev = 5 dni + št. ure; 10 ur; -1 zaradi 0-based indexa
+		for(var i = 1; i < (6*10); i++) { // 6 stolpcev = 5 dni + št. ure; 10 ur;
 			if(celice[i].innerText === "") {
 				console.log(i, i%6, i%6-1, Math.floor(i/6+1-1));
 				prostost[i%6-1][Math.floor(i/6+1-1)].push(trenutnaUclinica); // prostost[dan][ura] 0-based
