@@ -42,6 +42,10 @@ function prikaz(profesor = lastProfesor) {
     }
     tabela.getElementsByTagName("td")[0].innerText = "" + profesor + " | Urnik " + tedenUrnika; // vrste[0].getElementsByTagName("td")[0].innerText = "Urnik " + tedenUrnika + "\n" + profesor;
 	obarvaj();
+	
+	location.href = "#";
+	location.href = "#urnik";
+
 
 }
 
