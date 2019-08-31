@@ -1,5 +1,5 @@
 ﻿// Seznam prostosti učilnic GimKr
-// Podatki zajeti 2018-10-18
+// Podatki zajeti 2019-08-30
 // Nazadnje posodobljeno 2018-10-28
 /* Avtor: Žan Žnidar */
 
