@@ -45,12 +45,16 @@ function prikaz(profesor = lastProfesor) {
 	
 	/*location.href = "#";
 	location.href = "#urnik";*/
-	document.getElementById("urnik").scrollIntoView();
+	//document.getElementById("urnik").scrollIntoView();
 	
 	if(location.href.indexOf("#") === -1) {
 		location.href = "#"; // Pricakovan odziv uporabnika, ce zeli zamenjati profesorja, je gumb Nazaj v brskalniku (na napravi) --> V ta namen dodamo en vnos v History, da ce slucajno to poskusi, pomotoma ne zapre strani. To storimo le enkrat, da history ni spam.
 	}
-
+	
+	if(location.href.indexOf("#urnik") === -1) {
+		location.href = "#urnik"; // Fix za WebKit
+	}
+	document.getElementById("urnik").scrollIntoView();
 }
 
 
