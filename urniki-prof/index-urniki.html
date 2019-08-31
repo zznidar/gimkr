@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8" />
+	<meta name="author" content="Žan Žnidar">
+	<title>Urniki profesorjev GimKr</title>
+	<meta name="description" content="Urniki profesorjev na Gimnaziji Kranj">
+	
+	<style type="text/css">p.break { page-break-before: always; }
+<!--
+td {border: 1px; vertical-align:text-center; text-align: center; padding:3px; cell-margin:0px; border-style:solid; border-color:black;}
+ .tdx {border: 1px; vertical-align:text-top; padding:10px; cell-margin:0px; background-color:white; border-style:solid; border-color:black;}
+ .tdgray {border: 1px; vertical-align:text-top; padding:3px; cell-margin:0px; background-color:#E9E9E9; border-style:solid; border-color:black;}
+table {border-width: 1px; padding:0px; margin:0px; font-family : verdana; font-size:1em; border-style:solid; border-color:black; border-collapse: collapse;}
+-->
+<!--
+div.banners {
+display: none;
+}
+-->
+<!--
+div.bannet {
+display: none;
+}
+-->
+
+<!--
+body {
+background-color: #c9f2ff;
+}
+-->
+  </style>
+</head> 
+ 
+<body> 
+<h1 style="margin-bottom: 0.2em; color: #356f6a;">Urniki profesorjev Gimnazije Kranj</h1>
+<p id="urnik">Nalagam trenutni urnik ...</p>
+<!-- <p><i>V prvem mesecu se urniki lahko še nekoliko spremenijo.</i></p> -->
+
+
+<!-- Tukaj dodamo 4 radio gumbe za 4 tedne urnikov, nato pa navaden a href za vsakega profesorja; onclick spremeni prikaz urnika na dnu strani in magari poscrolla oz. se prikaze ob strani -->
+<div onclick="prikaz()">
+<label> <input type="radio" name="urnik" value="1" /> Urnik 1</label>&nbsp;&nbsp;&nbsp;&nbsp;
+<label> <input type="radio" name="urnik" value="2" disabled="" /> Urnik 2</label>&nbsp;&nbsp;&nbsp;&nbsp;
+<label> <input type="radio" name="urnik" value="3" disabled="" /> Urnik 3</label>&nbsp;&nbsp;&nbsp;&nbsp;
+<label> <input type="radio" name="urnik" value="4" disabled="" /> Urnik 4</label>&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+
+<div id="profesorji" style="float:left"></div>
+
+<div style="float:center">
+<table id="tbl">
+<tbody><tr><td></td><td><b>Ponedeljek</b></td><td><b>Torek</b></td><td><b>Sreda</b></td><td><b>Četrtek</b></td><td><b>Petek</b>
+</td></tr><tr><td><b>1. ura <br><small>(7.10–07.55)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>2. ura <br><small>(08.00–08.45)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>3. ura <br><small>(08.50–09.35)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>4. ura <br><small>(09.40–10.25)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>5. ura <br><small>(10.40–11.25)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>6. ura <br><small>(11.30–12.15)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>7. ura <br><small>(12.20–13.05)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>8. ura <br><small>(13.10–13.55)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>9. ura <br><small>(14.00–14.45)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>10. ura <br><small>(14.50–15.35)</small></b></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+</div>
+
+<br>
+<p style="margin-top: 0.5em; margin-bottom: 1.5em"><a href="http://www.gimkr.si/urniki">Podatki</a> zajeti dne <a href="https://www.easistent.com/urniki/56149a5b3eb5cbefdaf9c9ded39a80c8c31d8f33/ucilnice/652150">31.&nbsp;8.&nbsp;2019</a> | Avtor: Žan&nbsp;Žnidar</p>
+<p style="color:gray; font-size:0.8em"><a href="https://raw.githubusercontent.com/zznidar/gimkr/master/urniki-prof/changes" style="text-decoration: underline; color: gray;">Različica 0</a>, nazadnje posodobljeno 2019-08-31</p> <!-- verzija -->
+
+
+	<script src="Urniki_profesorjev.js"></script>
+	
+
+	
+</body> 
+</html> 
