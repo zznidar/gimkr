@@ -14,7 +14,7 @@ var o = [
 
 Object.keys(o[0]).forEach(function(profesor) {
     console.log(profesor); // Add adjacent html oz. create element
-	profesorji.insertAdjacentHTML("beforeend", "<a href='#"+profesor+"' onclick='prikaz(&quot;"+profesor+"&quot;)'>" + profesor + "</a><br/>"); // Klik na link profesorja bo poklical funkicjo prikaz(profesor)
+	profesorji.insertAdjacentHTML("beforeend", "<span class='wannabelink' onclick='prikaz(&quot;"+profesor+"&quot;)'>" + profesor + "</span><br/>"); // Klik na link profesorja bo poklical funkicjo prikaz(profesor)
 });
 
 lastProfesor = "";
@@ -43,9 +43,13 @@ function prikaz(profesor = lastProfesor) {
     tabela.getElementsByTagName("td")[0].innerText = "" + profesor + " | Urnik " + tedenUrnika; // vrste[0].getElementsByTagName("td")[0].innerText = "Urnik " + tedenUrnika + "\n" + profesor;
 	obarvaj();
 	
-	location.href = "#";
-	location.href = "#urnik";
-
+	/*location.href = "#";
+	location.href = "#urnik";*/
+	document.getElementById("urnik").scrollIntoView();
+	
+	if(location.href.indexOf("#") === -1) {
+		location.href = "#"; // Pricakovan odziv uporabnika, ce zeli zamenjati profesorja, je gumb Nazaj v brskalniku (na napravi) --> V ta namen dodamo en vnos v History, da ce slucajno to poskusi, pomotoma ne zapre strani. To storimo le enkrat, da history ni spam.
+	}
 
 }
 
