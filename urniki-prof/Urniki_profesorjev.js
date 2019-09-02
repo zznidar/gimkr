@@ -1,6 +1,6 @@
 ﻿// Urniki profesorjev GimKr
 // Podatki zajeti 2019-08-31
-// Nazadnje posodobljeno 2019-08-31
+// Nazadnje posodobljeno 2019-09-01
 /* Avtor: Žan Žnidar */
 
 profesorji = document.getElementById("profesorji");
@@ -12,7 +12,13 @@ var o = [
 			{"":[], "M. Zalokar":[[["5"],["5"],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],["5"],["5"],[],[]],[[],[],[],[],[],[],[],[],[],[]]],"T. Mohar":[[[],[],[],[],[],[],[],[],[],[]],[["5"],["5"],[],[],[],[],[],[],[],[]],[[],[],[],[],["5"],["5"],[],[],[],[]],[[],[],["5"],[],["5"],["5"],[],[],[],[]],[[],["5"],["5"],["5"],[],[],[],[],[],[]]],"P. Flajnik":[[[],[],["5"],["5"],["5"],["5"],[],[],[],[]],[[],[],[],[],[],[],["5"],["5"],[],["5"]],[["5"],["5"],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[]],[["5"],[],[],[],[],[],[],[],[],[]]],"V. Tsigaridas":[[[],[],[],[],[],[],["5"],["5"],[],[]],[[],[],["5"],["5"],[],["5"],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[]],[["5"],["5"],[],["5"],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[]]]}
 		]
 
-Object.keys(o[0]).forEach(function(profesor) {
+Object.keys(o[0]).sort(function(a, b) {
+  if (a.replace("Č", "Čžžž").replace("Š", "Sžžž").split(". ")[1] < b.replace("Č", "Čžžž").replace("Š", "Sžžž").split(". ")[1]) {
+    return -1;
+  } else {
+    return 1;
+  }
+}).forEach(function(profesor) {
     console.log(profesor); // Add adjacent html oz. create element
 	profesorji.insertAdjacentHTML("beforeend", "<span class='wannabelink' onclick='prikaz(&quot;"+profesor+"&quot;)'>" + profesor + "</span><br/>"); // Klik na link profesorja bo poklical funkicjo prikaz(profesor)
 });
