@@ -1,5 +1,5 @@
 // Snippet za zajem urnikov profesorjev s spletne strani urnikov eAsistent
-// Nazadnje posodobljeno: 2019-08-31
+// Nazadnje posodobljeno: 2019-10-22
 /* Avtor: Žan Žnidar */
 
 const projekt = "https://www.easistent.com/urniki/56149a5b3eb5cbefdaf9c9ded39a80c8c31d8f33/ucilnice/652150"; // Main link, ki pelje do urnika sole -> ucilnice -> prva ucilnica, za trenutni teden/urnik
@@ -41,6 +41,17 @@ function check() {
 		for(var i = 1; i < (6*10); i++) { // 6 stolpcev = 5 dni + št. ure; 10 ur;
 	
 			if(celice[i].getElementsByClassName("text11").length !== 0) { // Ce je ura polna/zasedena ;; Predpostavimo, da v urniku ni napak (da bi bilo vec profesorjev hkrati v isti uclinici)
+				
+			var hkrativeniuri = []; // Array, kjer preverimo, da nima vec prof. hkrati v isti ucilnici
+			for (duple = 0; duple < celice[i].getElementsByClassName("text11").length; duple++) {
+				hkrativeniuri.push(celice[i].getElementsByClassName("text11")[duple].innerText.trim());
+			}
+			var hkrativeniuridedupl = [...new Set([...hkrativeniuri])];
+			if (hkrativeniuridedupl.length > 1) {
+				console.warn(hkrativeniuri, i, trenutnaUclinica); 
+			}
+					
+					
 				trenutniProfesor = celice[i].getElementsByClassName("text11")[0].innerText;
 				console.log(i, i%6, i%6-1, Math.floor(i/6+1-1)), trenutniProfesor;
 			
