@@ -1,4 +1,7 @@
-﻿1.6b (2019-10-12)
+﻿1.6c (2019-11-07)
+	+ Padding okrog linka do urnikov profesorjev, da ga je lažje klikniti
+
+1.6b (2019-10-12)
 	* Za hitrejše delovanje onemogočimo double-tap to zoom
 
 1.6a (2019-10-08)
