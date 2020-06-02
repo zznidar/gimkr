@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		h2 {
+		padding-top: 1em;
+		}
+		
+		table {
+			border-collapse: collapse;
+		}
+		
+		th, td {
+			padding: 0.2em 0.2em
+		}
+		
+		th {
+			font-weight: bold;
+			background-color: hsla(211, 100%, 20%, 1);
+			color: white;
+			border-color: white;
+		}
+		
+		tr:nth-child(odd) {
+			background-color: #e2f0ff;
+		}
+	</style>
+</head>
+<body>
+<h1>Kalkulator točk obveznih maturitetnih predmetov splošne mature 2020</h1>
+
+<div id="ANG">
+	<h2>Angleščina</h2>
+<label for="ang1a">Izpitna pola 1 A (bralno)</label>
+	<input type="number" id="ang1a" min="0" max="100">&nbsp;%<br>
+<label for="ang1b">Izpitna pola 1 B (slovnica)</label>
+	<input type="number" id="ang1b" min="0" max="100">&nbsp;%<br>
+<label for="ang2">Izpitna pola 2 (slušno)</label>
+	<input type="number" id="ang2" min="0" max="100">&nbsp;%<br>
+<label for="ang3a">Izpitna pola 3 A (stalne sporočanjske oblike)</label>
+	<input type="number" id="ang3a" min="0" max="100">&nbsp;%<br>
+<label for="ang3b">Izpitna pola 3 B (esej)</label>
+	<input type="number" id="ang3b" min="0" max="100">&nbsp;%<br>
+<label for="angu">Ustni</label>
+	<input type="number" id="angu" min="0" max="100">&nbsp;%<br>
+	
+<button type="button" onclick="rang.innerText = ('Skupaj angleščina: ' + calculate('ang') + ' točk');">Izračunaj!</button><br>
+<p id="rang"></p>
+<table border="1">
+	<tr><th>Leto</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+	<tr><td>2015</td><td>50</td><td>62</td><td>74</td><td>86</td></tr>
+	<tr><td>2016</td><td>52</td><td>64</td><td>76</td><td>88</td></tr>
+	<tr><td>2017</td><td>52</td><td>64</td><td>76</td><td>88</td></tr>
+	<tr><td>2018</td><td>50</td><td>62</td><td>74</td><td>86</td></tr>
+	<tr><td>2019</td><td>50</td><td>62</td><td>74</td><td>86</td></tr>
+</table>
+</div>
+
+<div id="SLO">
+	<h2>Slovenščina</h2>
+<label for="slo1">Izpitna pola 1 (esej)</label>
+	<input type="number" id="slo1" min="0" max="100">&nbsp;%<br>
+<label for="slo2">Izpitna pola 2 (slovnica)</label>
+	<input type="number" id="slo2" min="0" max="100">&nbsp;%<br>
+<label for="slou">Ustni</label>
+	<input type="number" id="slou" min="0" max="100">&nbsp;%<br>
+	
+<button type="button" onclick="rslo.innerText = ('Skupaj slovenščina: ' + calculate('slo') + ' točk');">Izračunaj!</button><br>
+<p id="rslo"></p>
+<table border="1">
+<tr><th>Leto</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr>
+<tr><td>2015</td><td>48</td><td>59</td><td>65</td><td>70</td><td>75</td><td>80</td><td>86</td></tr>
+<tr><td>2016</td><td>47</td><td>57</td><td>63</td><td>68</td><td>74</td><td>79</td><td>85</td></tr>
+<tr><td>2017</td><td>47</td><td>57</td><td>62</td><td>67</td><td>73</td><td>79</td><td>84</td></tr>
+<tr><td>2018</td><td>48</td><td>58</td><td>64</td><td>69</td><td>74</td><td>80</td><td>85</td></tr>
+<tr><td>2019</td><td>49</td><td>59</td><td>65</td><td>70</td><td>75</td><td>80</td><td>86</td></tr>
+<tr><td>2019</td><td>49</td><td>59</td><td>65</td><td>70</td><td>75</td><td>80</td><td>86</td></tr>
+</table>
+</div>
+
+<div id="MATON">
+	<h2>Matematika (ON)</h2>
+<label for="maton1">Izpitna pola</label>
+	<input type="number" id="maton1" min="0" max="100">&nbsp;%<br>
+<label for="matonu">Ustni</label>
+	<input type="number" id="matonu" min="0" max="100">&nbsp;%<br>
+	
+<button type="button" onclick="rmaton.innerText = ('Skupaj matematika (ON): ' + calculate('maton') + ' točk');">Izračunaj!</button><br>
+<p id="rmaton"></p>
+<table border="1">
+<tr><th>Leto</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+<tr><td>2015</td><td>46</td><td>60</td><td>73</td><td>86</td></tr>
+<tr><td>2016</td><td>45</td><td>58</td><td>71</td><td>85</td></tr>
+<tr><td>2017</td><td>46</td><td>60</td><td>74</td><td>87</td></tr>
+<tr><td>2018</td><td>46</td><td>59</td><td>73</td><td>86</td></tr>
+<tr><td>2019</td><td>47</td><td>60</td><td>74</td><td>86</td></tr>
+</table>
+</div>
+
+<div id="MATVN">
+	<h2>Matematika (VN)</h2>
+<label for="matvn1">Izpitna pola 1</label>
+	<input type="number" id="matvn1" min="0" max="100">&nbsp;%<br>
+<label for="matvn2">Izpitna pola 2</label>
+	<input type="number" id="matvn2" min="0" max="100">&nbsp;%<br>
+<label for="matvnu">Ustni</label>
+	<input type="number" id="matvnu" min="0" max="100">&nbsp;%<br>
+	
+<button type="button" onclick="rmatvn.innerText = ('Skupaj matematika (VN): ' + calculate('matvn') + ' točk');">Izračunaj!</button><br>
+<p id="rmatvn"></p>
+<table border="1">
+<tr><th>Leto</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr>
+<tr><td>2015</td><td>46</td><td>60</td><td>66</td><td>73</td><td>79</td><td>86</td><td>92</td></tr>
+<tr><td>2016</td><td>45</td><td>58</td><td>65</td><td>70</td><td>77</td><td>85</td><td>91</td></tr>
+<tr><td>2017</td><td>46</td><td>59</td><td>66</td><td>71</td><td>77</td><td>85</td><td>91</td></tr>
+<tr><td>2018</td><td>46</td><td>59</td><td>66</td><td>71</td><td>77</td><td>85</td><td>91</td></tr>
+<tr><td>2019</td><td>47</td><td>59</td><td>64</td><td>70</td><td>76</td><td>84</td><td>90</td></tr>
+</table>
+</div>
+
+<div id="footer" style="padding-top: 1em; color: #9E9E9E;">
+	<p><a href="https://www.ric.si/splosna_matura/predmeti" style="color: hsla(233, 50%, 62%, 1);">Podatki</a> zajeti dne 2.&nbsp;6.&nbsp;2020 | Avtor: Žan Žnidar</p>
+</div>
+
+
+<script>
+var vrednotenje = {
+	"ang": {
+		"1a": 0.2,
+		"1b": 0.15,
+		"2": 0.15,
+		"3a": 0.1,
+		"3b": 0.2,
+		"u": 0.2
+	},
+	
+	"slo": {
+		"1": 0.5,
+		"2": 0.3,
+		"u": 0.2
+	},
+	
+	"maton": {
+		"1": 0.8,
+		"u": 0.2
+	},
+	
+	"matvn": {
+		"1": 0.5333,
+		"2": 0.2667,
+		"u": 0.2
+	}
+	
+};
+
+	function calculate(predmet) {
+		var rezultat = 0;
+		for (del in vrednotenje[predmet]) {
+			console.log(del);
+			rezultat += (document.getElementById(predmet + del).value/100*(vrednotenje[predmet][del]));
+		}
+		return (Math.round((rezultat *= 100)*10)/10);
+		
+	}
+</script>
+</body>
+</html>
+
