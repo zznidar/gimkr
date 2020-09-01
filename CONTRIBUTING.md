@@ -18,7 +18,7 @@ Iz zgodovinskih razlogov se vsako leto kreira nova .js datoteka, ki vsebuje poda
 2. V vrstici 2 navedeš datum zajema podatkov
 3. V datoteki [index.html](https://github.com/zznidar/gimkr/blob/5b3465e3014fb11f0d69699c3e61d5a91f80fe0f/prostost/index.html#L54) popraviš script src na najnovejšo datoteko in v vrstici [50](https://github.com/zznidar/gimkr/blob/5b3465e3014fb11f0d69699c3e61d5a91f80fe0f/prostost/index.html#L50) navedeš, kdaj so bili zajeti podatki (ter po potrebi popraviš vir)
 
-[Tedni.js](https://github.com/zznidar/gimkr/blob/master/prostost/snippets/Tedni.js) se uporabi vsakoletno, ko šola objavi razpored, kateri teden velja kateri urnik (štirje urniki). Odgovor snippeta se prilepi v vrstico 20 letošnje `Prostost_ucilnic_GimKr_????-??.js` datoteke.
+[Tedni.js](https://github.com/zznidar/gimkr/blob/master/prostost/snippets/Tedni.js) se uporabi vsakoletno, ko šola objavi razpored, kateri teden velja kateri urnik (štirje urniki). Odgovor snippeta se prilepi v vrstico 20 letošnje `Prostost_ucilnic_GimKr_????-??.js` datoteke in v vrstico 75 letošnje `Urniki_profesorjev_????-??` datoteke.
 
 [Prostost-iz-eA.js](https://github.com/zznidar/gimkr/blob/master/prostost/snippets/Prostost-iz-eA.js) se uporabi vsakič, ko pride do spremembe urnika (v prvih mesecih je to lahko pogost pojav). Snippet se uporabi za vsak urnik posebej (torej štirikrat). Pred začetkom poiščemo teden z želenim urnikom, ki **nima nadomeščanj, dogodkov, praznikov** ali drugih posebnosti. Odgovor snippeta se prilepi v vrstico 10, 12, 14, 16 (glede na urnik) letošnje `Prostost_ucilnic_GimKr_????-??.js` datoteke. _Ne spreglej podpičja na koncu_.
 
