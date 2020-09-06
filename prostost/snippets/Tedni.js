@@ -1,5 +1,5 @@
 // Parsanje tednov za urnike iz http://www.gimkr.si/urniki
-// Nazadnje posodobljeno: 2018-02-16
+// Nazadnje posodobljeno: 2020-09-06
 /* Avtor: Žan Žnidar */
 
 tedni = [];
@@ -18,7 +18,7 @@ for (var u = 2; u <= 8; u += 2) {
 
         for (var j = 0; j <= 1; j++) {
             // Številke mesecev zamenjamo za imena mesecev, da jih lahko poparsamo; za končne dodamo minuto pred polnočjo, da se šteje tudi današnji dan; nato jih poparsamo
-            tedni1[i][j] = Date.parse(tedni1[i][j].split(". ")[0] + ". " + months[tedni1[i][j].split(". ")[1] - 1] + " " + tedni1[i][j].split(". ")[2] + (j == 1 ? " 23:59" : ""));
+            tedni1[i][j] = Date.parse(tedni1[i][j].split(".")[0].trim() + ". " + months[tedni1[i][j].split(".")[1] - 1].trim() + " " + tedni1[i][j].split(".")[2].trim() + (j == 1 ? " 23:59" : "")); // splitamo samo na piko, nato trimmamo, da se izognemo tezavam zaradi typotov (odvecni/manjkajoci presledki pri datumih)
         }
     }
 
