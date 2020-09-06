@@ -1,6 +1,6 @@
 ﻿// Urniki profesorjev GimKr
 // Podatki zajeti 2020-09-06
-// Nazadnje posodobljeno 2019-12-03
+// Nazadnje posodobljeno 2020-09-06
 /* Avtor: Žan Žnidar */
 
 profesorji = document.getElementById("profesorji");
@@ -16,7 +16,7 @@ var o = [
 			{"":[]}
 		];
 
-Object.keys(o[0]).sort(function(a, b) {
+[...new Set([...Object.keys(o[0]), ...Object.keys(o[1]), ...Object.keys(o[2]), ...Object.keys(o[3])])].sort(function(a, b) {
   if (a.replace("Č", "Čžžž").replace("Š", "Sžžž").split(". ")[1] < b.replace("Č", "Čžžž").replace("Š", "Sžžž").split(". ")[1]) {
     return -1;
   } else {
@@ -37,7 +37,8 @@ function prikaz(profesor = lastProfesor) {
 	lastProfesor = profesor; // Zabelezimo nazadnje izbranega profesorja, da ob spremembi tedna/urnika lahko klicemo fn s profesorjem
 	var tedenUrnika = document.querySelector('input[name="urnik"]:checked').value; // Kateri urnik je izbran
 	
-	var zbirka = o[tedenUrnika-1][profesor]; // Kasneje bo tu zajeta stevilka urnika, glede na selected radio button  ||| [0] -> [izbraniTeden]
+	var zbirka = o[tedenUrnika-1][profesor] // Kasneje bo tu zajeta stevilka urnika, glede na selected radio button  ||| [0] -> [izbraniTeden]
+	|| [[[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[]]]; // Ce profesor ta teden nima ur, naj pokaze prazen urnik
     //console.log(zbirka);
 	
     var tabela = document.getElementById("tbl");
