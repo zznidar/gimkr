@@ -3,7 +3,7 @@
 /* Avtor: Žan Žnidar */
 
 const projekt = "https://www.easistent.com/urniki/56149a5b3eb5cbefdaf9c9ded39a80c8c31d8f33/ucilnice/652150"; // Main link, ki pelje do urnika sole -> ucilnice -> prva ucilnica, za trenutni teden/urnik
-const izvzemi = ["kab-mm", "kd", "knj"]; // Izvzete učilnice
+const izvzemi = ["kab-mm", "kd", "knj", "bazen"]; // Izvzete učilnice
 
 
 /* Note: ce zelimo gledati za kaksen teden naprej, na zacetek checka dodamo 
