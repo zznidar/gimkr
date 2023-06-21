@@ -1,4 +1,4 @@
-// Parsanje tednov za urnike iz http://www.gimkr.si/urniki
+// Parsanje tednov za urnike iz https://www.gimkr.si/dijaki/urniki-in-nadomescanja/
 // Nazadnje posodobljeno: 2020-09-06
 /* Avtor: Žan Žnidar */
 
